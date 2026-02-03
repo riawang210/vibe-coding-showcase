@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Coding Journey | 王诗卿</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">WSQ<span class="accent">.</span></a>
+            <div class="nav-links">
+                <a href="#homework">作业展示</a>
+                <a href="#reflections">心得收获</a>
+                <a href="#about">关于我</a>
+            </div>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#homework">作业展示</a>
+        <a href="#reflections">心得收获</a>
+        <a href="#about">关于我</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">Vibe Coding Showcase</div>
+                <h1>用 AI 编程<br><span class="gradient-text">从 0 到 1 构建产品</span></h1>
+                <p class="hero-subtitle">7 次作业，7 次从想法到落地的旅程。<br>这是一份关于 Vibe Coding 的学习记录与成长轨迹。</p>
+                <div class="hero-meta">
+                    <div class="meta-item">
+                        <span class="meta-label">学员</span>
+                        <span class="meta-value">王诗卿</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">身份</span>
+                        <span class="meta-value">AI 产品经理</span>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-label">作业数</span>
+                        <span class="meta-value">7 份</span>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <a href="#homework" class="btn btn-primary">查看作业 <i class="fas fa-arrow-down"></i></a>
+                    <a href="https://editorial-six.vercel.app/" target="_blank" class="btn btn-outline">个人主页 <i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="code-header">
+                        <div class="code-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <span class="code-title">vibe-coding.js</span>
+                    </div>
+                    <div class="code-body">
+                        <pre><code><span class="code-keyword">const</span> <span class="code-var">vibeCoding</span> = {
+  <span class="code-prop">idea</span>: <span class="code-string">"用自然语言描述需求"</span>,
+  <span class="code-prop">tools</span>: [<span class="code-string">"Claude"</span>, <span class="code-string">"Cursor"</span>, <span class="code-string">"Lovable"</span>],
+  <span class="code-prop">build</span>: <span class="code-keyword">async</span> () => {
+    <span class="code-keyword">const</span> <span class="code-var">product</span> = <span class="code-keyword">await</span> <span class="code-func">ai</span>.<span class="code-func">generate</span>(idea);
+    <span class="code-keyword">return</span> <span class="code-func">deploy</span>(product);
+  }
+};</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-hint">
+            <span>向下滚动</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Homework Section -->
+    <section class="section homework-section" id="homework">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Homework</span>
+                <h2>作业展示</h2>
+                <p>从场景挖掘到产品落地，记录 Vibe Coding 课程的每一次实践</p>
+            </div>
+
+            <!-- Homework 1 -->
+            <div class="hw-card" data-index="01">
+                <div class="hw-card-header">
+                    <div class="hw-number">01</div>
+                    <div class="hw-info">
+                        <h3>「链小改」MVP 场景</h3>
+                        <div class="hw-tags">
+                            <span class="tag">场景挖掘</span>
+                            <span class="tag">MVP</span>
+                            <span class="tag">产品设计</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hw-card-body">
+                    <div class="hw-description">
+                        <p>从 3 个真实痛点场景出发，经过可行性分析最终选定「局改谈单神器」作为 MVP 方向。这是一个帮助装修顾问快速生成报价方案的 AI 工具。</p>
+                        <div class="hw-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-search"></i>
+                                <div>
+                                    <strong>痛点发现</strong>
+                                    <span>POI 分析 / 视频脚本 / 装修报价</span>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-layer-group"></i>
+                                <div>
+                                    <strong>技术选型</strong>
+                                    <span>Lovable + Supabase + Vercel + PostHog</span>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-pencil-ruler"></i>
+                                <div>
+                                    <strong>产品原型</strong>
+                                    <span>输入空间/面积/档次 → 智能报价方案</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hw-visual">
+                        <div class="visual-card gradient-1">
+                            <i class="fas fa-lightbulb"></i>
+                            <p>从 3 个场景中选定<br><strong>局改谈单神器</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Homework 2 -->
+            <div class="hw-card" data-index="02">
+                <div class="hw-card-header">
+                    <div class="hw-number">02</div>
+                    <div class="hw-info">
+                        <h3>PRD 撰写 + 实战版本迭代</h3>
+                        <div class="hw-tags">
+                            <span class="tag">PRD</span>
+                            <span class="tag">版本迭代</span>
+                            <span class="tag">数据埋点</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hw-card-body">
+                    <div class="hw-description">
+                        <p>完成链小改的完整 PRD 文档，涵盖业务流程、功能规格、数据埋点设计。并从 v1.0 迭代至 v5.0，逐步引入 Supabase、SEO、Google Analytics 和 PostHog。</p>
+                        <div class="hw-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-file-alt"></i>
+                                <div>
+                                    <strong>完整 PRD</strong>
+                                    <span>业务流程 / 功能规格 / 角色定义</span>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-code-branch"></i>
+                                <div>
+                                    <strong>5 个大版本</strong>
+                                    <span>v1.0 单项目 → v5.0 PostHog 全埋点</span>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-chart-bar"></i>
+                                <div>
+                                    <strong>数据驱动</strong>
+                                    <span>PostHog 事件埋点 + GA 分析</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hw-visual">
+                        <div class="version-timeline">
+                            <div class="version-item active">v1.0</div>
+                            <div class="version-line"></div>
+                            <div class="version-item">v2.0</div>
+                            <div class="version-line"></div>
+                            <div class="version-item">v3.0</div>
+                            <div class="version-line"></div>
+                            <div class="version-item">v4.0</div>
+                            <div class="version-line"></div>
+                            <div class="version-item highlight">v5.0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Homework 3 -->
+            <div class="hw-card" data-index="03">
+                <div class="hw-card-header">
+                    <div class="hw-number">03</div>
+                    <div class="hw-info">
+                        <h3>「链小改」接入 LLM</h3>
+                        <div class="hw-tags">
+                            <span class="tag">LLM</span>
+                            <span class="tag">Agent</span>
+                            <span class="tag">Qwen</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hw-card-body">
+                    <div class="hw-description">
+                        <p>通过阿里云百炼平台接入 Qwen-Plus 大模型，搭建 AI Agent 实现智能需求分析。包含 Supabase Edge Function 后端、SSE 流式对话前端组件，以及多轮 Bug 修复。</p>
+                        <div class="hw-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-robot"></i>
+                                <div>
+                                    <strong>Agent 设计</strong>
+                                    <span>角色/目标/输出格式/示例 四要素</span>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-server"></i>
+                                <div>
+                                    <strong>Edge Function</strong>
+                                    <span>Supabase 边缘函数 + SSE 流式响应</span>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-bug"></i>
+                                <div>
+                                    <strong>实战调试</strong>
+                                    <span>SSE 解析 / 环境变量 / CORS 问题</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hw-visual">
+                        <div class="visual-card gradient-2">
+                            <i class="fas fa-brain"></i>
+                            <p>Qwen-Plus-Latest<br><strong>智能需求拆解 Agent</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Homework 4 -->
+            <div class="hw-card" data-index="04">
+                <div class="hw-card-header">
+                    <div class="hw-number">04</div>
+                    <div class="hw-info">
+                        <h3>搭建一个 Skill</h3>
+                        <div class="hw-tags">
+                            <span class="tag">Claude Code</span>
+                            <span class="tag">Skill</span>
+                            <span class="tag">小红书</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hw-card-body">
+                    <div class="hw-description">
+                        <p>为 Claude Code 搭建小红书 AI 内容创作 Skill。设计了 6 步工作流：素材收集 → 苏格拉底提问 → 费曼学习法 → 内容创作 → 配图建议 → 归档，完整输出 SKILL.md 配置。</p>
+                        <div class="hw-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-stream"></i>
+                                <div>
+                                    <strong>6 步工作流</strong>
+                                    <span>素材 → 提问 → 学习 → 创作 → 配图 → 归档</span>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <div>
+                                    <strong>思维方法</strong>
+                                    <span>苏格拉底提问法 + 费曼学习法</span>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-image"></i>
+                                <div>
+                                    <strong>AI 配图</strong>
+                                    <span>Midjourney / DALL-E 提示词生成</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hw-visual">
+                        <div class="workflow-visual">
+                            <div class="workflow-step"><i class="fas fa-search"></i><span>素材</span></div>
+                            <div class="workflow-arrow"><i class="fas fa-chevron-right"></i></div>
+                            <div class="workflow-step"><i class="fas fa-question"></i><span>提问</span></div>
+                            <div class="workflow-arrow"><i class="fas fa-chevron-right"></i></div>
+                            <div class="workflow-step"><i class="fas fa-book"></i><span>学习</span></div>
+                            <div class="workflow-arrow"><i class="fas fa-chevron-right"></i></div>
+                            <div class="workflow-step"><i class="fas fa-pen"></i><span>创作</span></div>
+                            <div class="workflow-arrow"><i class="fas fa-chevron-right"></i></div>
+                            <div class="workflow-step"><i class="fas fa-image"></i><span>配图</span></div>
+                            <div class="workflow-arrow"><i class="fas fa-chevron-right"></i></div>
+                            <div class="workflow-step"><i class="fas fa-archive"></i><span>归档</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Homework 5 -->
+            <div class="hw-card" data-index="05">
+                <div class="hw-card-header">
+                    <div class="hw-number">05</div>
+                    <div class="hw-info">
+                        <h3>个人主页</h3>
+                        <div class="hw-tags">
+                            <span class="tag">HTML5 UP</span>
+                            <span class="tag">多语言</span>
+                            <span class="tag">杂志风格</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hw-card-body">
+                    <div class="hw-description">
+                        <p>基于 HTML5 UP 模板（Editorial + Paradigm Shift）搭建杂志风格个人主页，支持中/英/韩三语切换。使用 Codex 和 Claude Code 完成开发，展示个人项目、经历和技能。</p>
+                        <div class="hw-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-palette"></i>
+                                <div>
+                                    <strong>杂志风格</strong>
+                                    <span>Editorial + Paradigm Shift 双模板</span>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-language"></i>
+                                <div>
+                                    <strong>三语支持</strong>
+                                    <span>中文 / English / 한국어</span>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-tools"></i>
+                                <div>
+                                    <strong>AI 辅助开发</strong>
+                                    <span>Codex (GPT-5.2) + Claude Code</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hw-visual">
+                        <div class="visual-card gradient-3">
+                            <i class="fas fa-globe"></i>
+                            <p>三语杂志风格<br><strong><a href="https://editorial-six.vercel.app/" target="_blank" style="color:inherit;text-decoration:underline;">在线预览 →</a></strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Homework 6 -->
+            <div class="hw-card" data-index="06">
+                <div class="hw-card-header">
+                    <div class="hw-number">06</div>
+                    <div class="hw-info">
+                        <h3>Vercel 网站部署</h3>
+                        <div class="hw-tags">
+                            <span class="tag">Vercel</span>
+                            <span class="tag">CI/CD</span>
+                            <span class="tag">部署</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hw-card-body">
+                    <div class="hw-description">
+                        <p>掌握两种 Vercel 部署方式：CLI 手动部署和 GitHub + Vercel 自动化部署。成功将个人主页部署至 editorial-six.vercel.app，实现代码推送即自动更新。</p>
+                        <div class="hw-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-terminal"></i>
+                                <div>
+                                    <strong>CLI 部署</strong>
+                                    <span>npm i -g vercel → vercel 一键部署</span>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fab fa-github"></i>
+                                <div>
+                                    <strong>GitHub 自动部署</strong>
+                                    <span>推送即部署，CI/CD 流水线</span>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-link"></i>
+                                <div>
+                                    <strong>线上地址</strong>
+                                    <span>editorial-six.vercel.app</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hw-visual">
+                        <div class="deploy-visual">
+                            <div class="deploy-step">
+                                <div class="deploy-icon"><i class="fas fa-code"></i></div>
+                                <span>Code</span>
+                            </div>
+                            <div class="deploy-arrow">→</div>
+                            <div class="deploy-step">
+                                <div class="deploy-icon"><i class="fab fa-github"></i></div>
+                                <span>GitHub</span>
+                            </div>
+                            <div class="deploy-arrow">→</div>
+                            <div class="deploy-step">
+                                <div class="deploy-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                                <span>Vercel</span>
+                            </div>
+                            <div class="deploy-arrow">→</div>
+                            <div class="deploy-step">
+                                <div class="deploy-icon"><i class="fas fa-globe"></i></div>
+                                <span>Live</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Homework 7 -->
+            <div class="hw-card" data-index="07">
+                <div class="hw-card-header">
+                    <div class="hw-number">07</div>
+                    <div class="hw-info">
+                        <h3>Scrollshot (MVP)</h3>
+                        <div class="hw-tags">
+                            <span class="tag">macOS App</span>
+                            <span class="tag">SwiftUI</span>
+                            <span class="tag">截图工具</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hw-card-body">
+                    <div class="hw-description">
+                        <p>开发 macOS 原生滚动截图工具。支持窗口选择、自动滚动、模板匹配拼接、裁剪导出。使用 CGEvent 实现自动滚动，NSBitmapImageRep 处理图像，SwiftUI 构建界面。</p>
+                        <div class="hw-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-desktop"></i>
+                                <div>
+                                    <strong>macOS 原生</strong>
+                                    <span>SwiftUI + CGWindowListCopyWindowInfo</span>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-scroll"></i>
+                                <div>
+                                    <strong>自动滚动截图</strong>
+                                    <span>CGEvent + 模板匹配拼接</span>
+                                </div>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-crop-alt"></i>
+                                <div>
+                                    <strong>裁剪导出</strong>
+                                    <span>上下左右裁剪 + PNG 导出</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hw-visual">
+                        <div class="visual-card gradient-4">
+                            <i class="fas fa-camera"></i>
+                            <p>macOS 滚动截图<br><strong><a href="https://github.com/riawang210/scrollshot" target="_blank" style="color:inherit;text-decoration:underline;">GitHub →</a></strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reflections Section -->
+    <section class="section reflections-section" id="reflections">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Reflections</span>
+                <h2>Vibe Coding 心得与收获</h2>
+                <p>7 次作业，从产品经理到 Vibe Coder 的蜕变</p>
+            </div>
+
+            <div class="reflections-grid">
+                <div class="reflection-card main-reflection">
+                    <div class="reflection-icon"><i class="fas fa-quote-left"></i></div>
+                    <h3>什么是 Vibe Coding？</h3>
+                    <p>Vibe Coding 不是让你成为程序员，而是让你拥有<strong>把想法变成现实的能力</strong>。作为产品经理，我一直在写 PRD、画原型、和开发沟通。但 Vibe Coding 让我跳过了「等开发排期」这一步，直接用 AI 工具把脑子里的产品 build 出来。</p>
+                    <p>这 7 次作业，就是我从「只会写文档的 PM」到「能独立交付 MVP 的产品人」的完整旅程。</p>
+                </div>
+
+                <div class="reflection-card">
+                    <div class="reflection-number">01</div>
+                    <h4>AI 是副驾驶，不是自动驾驶</h4>
+                    <p>Cursor、Claude Code、Lovable 都很强，但它们需要你给出清晰的方向。需求拆解越细，Prompt 越精准，AI 输出的质量就越高。产品思维反而成了最重要的「编程技能」。</p>
+                </div>
+
+                <div class="reflection-card">
+                    <div class="reflection-number">02</div>
+                    <h4>版本迭代是最好的老师</h4>
+                    <p>从链小改 v1.0 到 v5.0，我经历了数据库迁移、SEO 优化、埋点体系搭建。每次迭代都在解决真实问题，不是为了学技术而学技术。这种「需求驱动的学习」效率远超看教程。</p>
+                </div>
+
+                <div class="reflection-card">
+                    <div class="reflection-number">03</div>
+                    <h4>Debug 是常态，不是意外</h4>
+                    <p>接入 LLM 时遇到 SSE 解析错误、环境变量丢失、CORS 跨域……每一个 Bug 都让我对技术架构有了更深的理解。最重要的不是写出完美代码，而是学会与 AI 一起高效排错。</p>
+                </div>
+
+                <div class="reflection-card">
+                    <div class="reflection-number">04</div>
+                    <h4>工具链的选择决定效率</h4>
+                    <p>Lovable 做前端原型、Supabase 做后端和数据库、Vercel 做部署、PostHog 做埋点——这套工具组合让一个人就能完成从开发到上线的全流程。选对工具比埋头苦干重要 10 倍。</p>
+                </div>
+
+                <div class="reflection-card">
+                    <div class="reflection-number">05</div>
+                    <h4>Skill 是 PM 的新武器</h4>
+                    <p>搭建小红书内容创作 Skill 让我意识到：未来的 PM 不只是写需求，还要能设计 AI 的工作流。把苏格拉底提问法和费曼学习法融入 Skill，这是产品思维和 AI 能力的真正融合。</p>
+                </div>
+
+                <div class="reflection-card">
+                    <div class="reflection-number">06</div>
+                    <h4>从 Web 到 Native，MVP 思维不变</h4>
+                    <p>最后一个作业做了 macOS 原生应用。虽然技术栈完全不同（SwiftUI vs React），但 MVP 的核心思路是一样的：找到最小可用功能，快速验证，再迭代。Vibe Coding 的本质是思维方式，不是具体技术。</p>
+                </div>
+            </div>
+
+            <div class="reflection-summary">
+                <div class="summary-content">
+                    <h3>最大的收获</h3>
+                    <p>Vibe Coding 让我从「需求的提出者」变成了「产品的构建者」。作为 AI 产品经理，我现在能独立完成从需求分析、PRD 撰写、原型搭建、LLM 接入、到部署上线的全流程。这不只是技能的提升，更是角色的转变——从等别人做，到自己做。</p>
+                    <div class="summary-stats">
+                        <div class="stat">
+                            <span class="stat-number">7</span>
+                            <span class="stat-label">完成作业</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">AI 工具掌握</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">1</span>
+                            <span class="stat-label">完整产品交付</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">∞</span>
+                            <span class="stat-label">可能性</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About</span>
+                <h2>关于我</h2>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-main">
+                    <h3>王诗卿 <span class="en-name">Wang Shiqing</span></h3>
+                    <p class="about-title">AI 产品经理</p>
+                    <p class="about-bio">具备业务到产品的闭环能力，参与 AI 工具从 0 到 1 落地。擅长需求洞察、流程标准化、数据建模与跨团队协作，推动工具与业务双向增效。</p>
+
+                    <div class="experience-list">
+                        <div class="exp-item">
+                            <div class="exp-period">2025.05 – 2026.01</div>
+                            <div class="exp-detail">
+                                <strong>上海链家 · 局改运营</strong>
+                                <span>SOP 搭建、AI 工具落地、培训赋能提升转化</span>
+                            </div>
+                        </div>
+                        <div class="exp-item">
+                            <div class="exp-period">2024.11 – 2025.04</div>
+                            <div class="exp-detail">
+                                <strong>上海链家 · 产品模型搭建</strong>
+                                <span>商圈模型、数据标准化、工具流程规范</span>
+                            </div>
+                        </div>
+                        <div class="exp-item">
+                            <div class="exp-period">2024.03 – 2024.08</div>
+                            <div class="exp-detail">
+                                <strong>小红书 · 产品运营实习</strong>
+                                <span>POI 数据基建、话题增长与运营策略</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-sidebar">
+                    <div class="skills-block">
+                        <h4>技能</h4>
+                        <div class="skill-tags">
+                            <span>Claude Code</span>
+                            <span>Cursor</span>
+                            <span>Lovable</span>
+                            <span>Coze</span>
+                            <span>CC Skills</span>
+                            <span>Supabase</span>
+                            <span>Vercel</span>
+                            <span>PostHog</span>
+                            <span>QGIS</span>
+                            <span>数据建模</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-block">
+                        <h4>联系方式</h4>
+                        <ul class="contact-list">
+                            <li>
+                                <i class="fas fa-envelope"></i>
+                                <a href="mailto:ria707796548@163.com">ria707796548@163.com</a>
+                            </li>
+                            <li>
+                                <i class="fab fa-github"></i>
+                                <a href="https://github.com/riawang210" target="_blank">GitHub</a>
+                            </li>
+                            <li>
+                                <i class="fab fa-linkedin"></i>
+                                <a href="#" target="_blank">LinkedIn</a>
+                            </li>
+                            <li>
+                                <i class="fas fa-globe"></i>
+                                <a href="https://editorial-six.vercel.app/" target="_blank">个人主页</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 王诗卿 · Vibe Coding Showcase</p>
+                <p class="footer-note">Built with Vibe Coding spirit — 用 AI 构建，用心打磨</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
